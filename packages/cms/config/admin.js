@@ -1,21 +1,21 @@
-import path from "path";
-
-export default {
+module.exports = ({ env }) => ({
   admin: {
     auth: {
-      secret: process.env.ADMIN_JWT_SECRET || "supersecretjwttoken",
+      secret: env('ADMIN_JWT_SECRET') || 'MjAyNS1jaGVya2FzaHluYXBpYW5vLWFkbWluLXNlY3JldC1rZXktMzItY2hhcnM=',
     },
   },
   apiToken: {
-    salt: process.env.API_TOKEN_SALT || "supersecretapitokensalt",
+    salt: env('API_TOKEN_SALT') || 'c2FsdC1mb3ItYXBpLXRva2VuLWtleTMyLWNoYXJzLWhlcmUtMjAyNQ==',
   },
   transfer: {
     token: {
-      salt: process.env.TRANSFER_TOKEN_SALT || "supersecrettransfertokensalt",
+      salt: env('TRANSFER_TOKEN_SALT') || 'dHJhbnNmZXItc2FsdC1rZXktMzItY2hhcnMtaGVyZS0yMDI1LXN0cmFwaQ==',
     },
   },
   flags: {
-    nps: process.env.FLAG_NPS !== "false",
-    promoteEE: process.env.FLAG_PROMOTE_EE !== "false",
+    nps: env.bool('FLAG_NPS', false),
+    promoteEE: env.bool('FLAG_PROMOTE_EE', false),
   },
-};
+});
+
+
