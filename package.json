@@ -1,0 +1,23 @@
+{
+  "name": "cherkashynapiano",
+  "version": "1.0.0",
+  "description": "Classical pianist portfolio",
+  "private": true,
+  "workspaces": [
+    "packages/cms",
+    "packages/web"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "start": "turbo run start",
+    "lint": "turbo run lint"
+  },
+  "devDependencies": {
+    "turbo": "^2.0.0"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  }
+}

@@ -1,0 +1,26 @@
+node_modules/
+.next/
+dist/
+build/
+.env
+.env.local
+.env*.local
+.DS_Store
+*.pem
+.vercel
+.turbo
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Strapi
+packages/cms/.cache/
+packages/cms/build/
+packages/cms/public/uploads/
+
+# Database
+*.sqlite
+*.sqlite3
