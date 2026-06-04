@@ -7,11 +7,11 @@ $container-width: 1400px;
 $font-heading: "Cormorant Garamond", serif;
 $font-body: "Inter", sans-serif;
 
-$background-dark: #0b0b0d;
-$background-light: #f5f3ef;
+$background-dark: $color-dark;
+$background-light: $color-light;
 
 $text-light: #f8f8f8;
 $text-dark: #1f1f1f;
 
-$accent: #b99b67;
-$border: rgba(185, 155, 103, 0.4);
+$accent: $color-gold;
+$border: rgba(198, 164, 106, 0.4);

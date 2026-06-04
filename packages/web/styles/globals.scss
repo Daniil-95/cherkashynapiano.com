@@ -1,8 +1,9 @@
-@use "variables";
-@use "mixins";
-@use "header";
-@use "hero";
-@use "footer";
+@import "variables";
+@import "mixins";
+
+@import "header";
+@import "hero";
+@import "footer";
 
 html,
 body {
