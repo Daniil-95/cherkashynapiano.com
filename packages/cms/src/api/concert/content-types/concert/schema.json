@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "concerts",
+  "info": {
+    "singularName": "concert",
+    "pluralName": "concerts",
+    "displayName": "Concert"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "date": {
+      "type": "date"
+    },
+    "city": {
+      "type": "string"
+    },
+    "venue": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "ticketUrl": {
+      "type": "string"
+    }
+  }
+}

@@ -4,6 +4,7 @@
   "description": "Strapi CMS for classical pianist portfolio",
   "private": true,
   "scripts": {
+    "dev": "strapi develop",
     "develop": "strapi develop",
     "start": "strapi start",
     "build": "strapi build",

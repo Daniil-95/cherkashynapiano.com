@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Classical pianist portfolio",
   "private": true,
+  "packageManager": "npm@11.6.2",
   "workspaces": [
     "packages/cms",
     "packages/web"
