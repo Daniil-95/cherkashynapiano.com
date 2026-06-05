@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Header() {
   return (
@@ -24,11 +25,11 @@ export default function Header() {
 
       <div className="site-header__social">
         <a href="#" aria-label="YouTube">
-          YT
+          <Image src="/images/logos/youtube-logo.svg" alt="YouTube" width={24} height={24}/>
         </a>
 
         <a href="#" aria-label="Instagram">
-          IG
+          <Image src="/images/logos/instagram-logo.svg" alt="Instagram" width={24} height={24}/>
         </a>
       </div>
     </header>

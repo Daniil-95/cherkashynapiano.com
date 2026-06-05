@@ -1,78 +1,80 @@
 .hero {
   min-height: 100vh;
-
   display: grid;
-  grid-template-columns: 45% 55%;
-
+  grid-template-columns: 45% 35% 20%;
   background: #080808;
 }
 
-.heroImage {
+.hero__image,
+.hero__piano {
   position: relative;
-  overflow: hidden;
-
-  img {
-    object-fit: cover;
-  }
 }
 
-.heroContent {
+.hero__image img,
+.hero__piano img {
+  object-fit: cover;
+}
+
+.hero__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  padding: 0 8rem;
-
-  color: #f5f1eb;
+  padding: 8rem 4rem 4rem;
+  color: $text-light;
 }
 
-.heroContent h1 {
-  font-size: clamp(4rem, 8vw, 7rem);
-  line-height: 0.95;
+.hero__title {
+  font-family: $font-heading;
+  font-size: 6rem;
+  line-height: 0.9;
   font-weight: 400;
-
-  margin-bottom: 2rem;
 }
 
-.subtitle {
-  display: inline-block;
-
-  margin-bottom: 2rem;
-
-  letter-spacing: 0.4rem;
-
-  font-size: 0.9rem;
-
-  color: #b89b63;
+.hero__subtitle {
+  margin-top: 2rem;
+  color: $accent;
+  letter-spacing: 0.35rem;
+  font-size: 1rem;
 }
 
-.heroContent p {
-  max-width: 500px;
-
-  font-size: 1.125rem;
-  line-height: 1.8;
-
-  color: rgba(255,255,255,.75);
-
-  margin-bottom: 3rem;
+.hero__line {
+  width: 60px;
+  height: 1px;
+  margin-top: 1.5rem;
+  background: $accent;
 }
 
-.button {
+.hero__text {
+  max-width: 420px;
+  margin-top: 2rem;
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.hero__button {
+  margin-top: 2.5rem;
   width: fit-content;
-
   padding: 1rem 2.5rem;
-
   background: transparent;
-
-  border: 1px solid #b89b63;
-
-  color: white;
-
+  border: 1px solid $accent;
+  color: $text-light;
+  letter-spacing: 0.15rem;
   cursor: pointer;
-
-  transition: .3s;
+  transition: all 0.3s ease;
 }
 
-.button:hover {
-  background: #b89b63;
+.hero__button:hover {
+  background: $accent;
+  color: #000;
+}
+
+.hero__piano {
+  overflow: hidden;
+}
+
+.hero__piano::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
 }
