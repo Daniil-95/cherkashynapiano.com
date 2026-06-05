@@ -1,25 +1,33 @@
 .hero {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 45% 35% 20%;
+  grid-template-columns: 42% 40% 18%;
   background: #080808;
 }
 
 .hero__image,
 .hero__piano {
   position: relative;
+  overflow: hidden;
 }
 
-.hero__image img,
+/* Фото Иры */
+.hero__image img {
+  object-fit: cover;
+  object-position: center top;
+}
+
+/* Рояль */
 .hero__piano img {
   object-fit: cover;
+  object-position: left center;
 }
 
 .hero__content {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 8rem 4rem 4rem;
+  padding: 8rem 3rem 4rem;
   color: $text-light;
 }
 
@@ -68,13 +76,9 @@
   color: #000;
 }
 
-.hero__piano {
-  overflow: hidden;
-}
-
 .hero__piano::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.65);
 }
