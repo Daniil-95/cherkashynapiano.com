@@ -2,83 +2,140 @@
   min-height: 100vh;
   display: grid;
   grid-template-columns: 42% 40% 18%;
-  background: #080808;
+
+  background: $background-dark;
 }
 
-.hero__image,
-.hero__piano {
+.hero-image,
+.hero-piano {
   position: relative;
   overflow: hidden;
 }
 
-/* Фото Иры */
-.hero__image img {
+.hero-image img {
   object-fit: cover;
   object-position: center top;
 }
 
-/* Рояль */
-.hero__piano img {
+.hero-piano img {
   object-fit: cover;
   object-position: left center;
 }
 
-.hero__content {
+.hero-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   padding: 8rem 3rem 4rem;
+
   color: $text-light;
 }
 
-.hero__title {
+.hero-title {
   font-family: $font-heading;
   font-size: 6rem;
-  line-height: 0.9;
   font-weight: 400;
+  line-height: 0.9;
 }
 
-.hero__subtitle {
+.hero-subtitle {
   margin-top: 2rem;
-  color: $accent;
-  letter-spacing: 0.35rem;
+
   font-size: 1rem;
+  letter-spacing: 0.35rem;
+
+  color: $color-gold;
 }
 
-.hero__line {
+.hero-line {
   width: 60px;
   height: 1px;
+
   margin-top: 1.5rem;
-  background: $accent;
+
+  background: $color-gold;
 }
 
-.hero__text {
+.hero-text {
   max-width: 420px;
+
   margin-top: 2rem;
+
   font-size: 1rem;
   line-height: 1.9;
 }
 
-.hero__button {
-  margin-top: 2.5rem;
+.hero-button {
   width: fit-content;
+
+  margin-top: 2.5rem;
   padding: 1rem 2.5rem;
+
+  border: 1px solid $color-gold;
   background: transparent;
-  border: 1px solid $accent;
+
   color: $text-light;
+
   letter-spacing: 0.15rem;
+  text-decoration: none;
+
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all $transition-default;
+
+  &:hover {
+    background: $color-gold;
+    color: $color-black;
+  }
 }
 
-.hero__button:hover {
-  background: $accent;
-  color: #000;
-}
-
-.hero__piano::after {
+.hero-piano::after {
   content: "";
+
   position: absolute;
   inset: 0;
+
   background: rgba(0, 0, 0, 0.65);
+}
+
+@include media-breakpoint-down(xl) {
+  .hero {
+    grid-template-columns: 45% 55%;
+  }
+
+  .hero-piano {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 5rem;
+  }
+}
+
+@include media-breakpoint-down(lg) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    display: none;
+  }
+
+  .hero-content {
+    padding: 8rem $container-padding-mobile 4rem;
+  }
+
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .hero-title {
+    font-size: 3.2rem;
+  }
+
+  .hero-subtitle {
+    letter-spacing: 0.2rem;
+  }
 }

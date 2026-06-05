@@ -1,0 +1,17 @@
+.container {
+  width: 100%;
+  max-width: $container-width;
+  margin: 0 auto;
+  padding-left: $container-padding-desktop;
+  padding-right: $container-padding-desktop;
+
+  @include media-breakpoint-down(xl) {
+    padding-left: $container-padding-tablet;
+    padding-right: $container-padding-tablet;
+  }
+
+  @include media-breakpoint-down(lg) {
+    padding-left: $container-padding-mobile;
+    padding-right: $container-padding-mobile;
+  }
+}

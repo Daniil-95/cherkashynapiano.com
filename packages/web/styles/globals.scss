@@ -1,10 +1,11 @@
 @import "variables";
 @import "mixins";
+@import "layout";
 
 @import "header";
 @import "hero";
-@import "footer";
 @import "biography";
+@import "footer";
 
 html,
 body {

@@ -3,7 +3,8 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="hero">
-      <div className="hero__image">
+
+      <div className="hero-image">
         <Image
           src="/images/hero/hero-pianist.jpg"
           alt="Irina Cherkashyna"
@@ -12,31 +13,33 @@ export default function Hero() {
         />
       </div>
 
-      <div className="hero__content">
-        <h1 className="hero__title">
+      <div className="hero-content">
+
+        <h1 className="hero-title">
           Irina
           <br />
           Cherkashyna
         </h1>
 
-        <span className="hero__subtitle">
+        <span className="hero-subtitle">
           CLASSICAL PIANIST
         </span>
 
-        <div className="hero__line" />
+        <div className="hero-line" />
 
-        <p className="hero__text">
+        <p className="hero-text">
           I am a concert pianist devoted to the art of classical music.
           My passion lies in bringing timeless masterpieces to life and
           sharing their beauty with audiences around the world.
         </p>
 
-        <button className="hero__button">
+        <button className="hero-button">
           VIEW REPERTOIRE
         </button>
+
       </div>
 
-      <div className="hero__piano">
+      <div className="hero-piano">
         <Image
           src="/images/hero/hero-piano.jpg"
           alt="Grand piano"
@@ -44,6 +47,7 @@ export default function Hero() {
           priority
         />
       </div>
+
     </section>
   );
 }

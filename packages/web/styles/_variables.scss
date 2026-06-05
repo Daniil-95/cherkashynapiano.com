@@ -1,17 +1,75 @@
+// Colors
+$color-black: #111111;
 $color-dark: #0b0b0d;
+$color-white: #ffffff;
+
 $color-light: #f5f1eb;
+$color-light-alt: #f8f5f0;
+
 $color-gold: #c6a46a;
+$color-gold-light: #d8bd82;
+$color-gold-dark: #b59b67;
 
-$container-width: 1400px;
+$color-text: #3e3e3e;
+$color-text-light: #f8f8f8;
 
-$font-heading: "Cormorant Garamond", serif;
-$font-body: "Inter", sans-serif;
-
+// Backgrounds
 $background-dark: $color-dark;
 $background-light: $color-light;
 
-$text-light: #f8f8f8;
-$text-dark: #1f1f1f;
+// Text
+$text-dark: $color-black;
+$text-body: $color-text;
+$text-light: $color-text-light;
 
-$accent: $color-gold;
-$border: rgba(198, 164, 106, 0.4);
+// Borders
+$border-gold: rgba(198, 164, 106, 0.4);
+$border-light: rgba(255, 255, 255, 0.15);
+
+// Layout
+$container-width: 1600px;
+$container-padding-desktop: 80px;
+$container-padding-tablet: 40px;
+$container-padding-mobile: 24px;
+
+// Sections
+$section-padding-desktop: 100px;
+$section-padding-tablet: 80px;
+$section-padding-mobile: 60px;
+
+// Spacing
+$spacing-xs: 16px;
+$spacing-sm: 24px;
+$spacing-md: 40px;
+$spacing-lg: 60px;
+$spacing-xl: 80px;
+$spacing-xxl: 120px;
+
+// Typography
+$font-heading: "Cormorant Garamond", serif;
+$font-body: "Inter", sans-serif;
+
+// Font Sizes
+$font-size-label: 14px;
+$font-size-body: 20px;
+$font-size-body-mobile: 18px;
+
+$font-size-section-title: 72px;
+$font-size-section-title-lg: 60px;
+$font-size-section-title-sm: 42px;
+
+// Border Radius
+$radius-sm: 6px;
+$radius-md: 12px;
+$radius-lg: 20px;
+$radius-xl: 30px;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-default: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Z-index
+$z-header: 100;
+$z-menu: 200;
+$z-modal: 1000;
