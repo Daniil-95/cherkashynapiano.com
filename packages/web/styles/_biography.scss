@@ -1,0 +1,179 @@
+.biography {
+  background: #f5f2ed;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 80px;
+    position: relative;
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: 420px 1fr;
+    gap: 120px;
+    align-items: center;
+  }
+
+  &__content {
+    max-width: 420px;
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 18px;
+
+    font-size: 14px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #b59b67;
+  }
+
+  &__title {
+    margin: 0;
+    font-family: var(--font-cormorant);
+    font-size: 72px;
+    font-weight: 400;
+    line-height: 0.95;
+    color: #111;
+  }
+
+  &__divider {
+    width: 55px;
+    height: 1px;
+    background: #c7b487;
+    margin: 28px 0 40px;
+  }
+
+  &__text {
+    margin: 0 0 22px;
+
+    font-size: 20px;
+    line-height: 1.8;
+    color: #3e3e3e;
+  }
+
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 35px;
+    min-width: 240px;
+    height: 70px;
+    border: 1px solid #c7b487;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #111;
+    transition: all .3s ease;
+
+    &:hover {
+      background: #111;
+      color: #fff;
+    }
+  }
+
+  &__image {
+    object-fit: cover;
+    object-position: center top;
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    height: 520px;
+    justify-self: end;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      object-position: center 15%;
+    }
+  }
+
+  &__signature {
+    position: absolute;
+    right: 40px;
+    bottom: -10px;
+
+    font-size: 140px;
+    line-height: 1;
+    color: #d8bd82;
+    opacity: 0.9;
+    pointer-events: none;
+  }
+}
+
+@media (max-width: 1200px) {
+  .biography {
+    .container {
+      padding: 0 40px;
+    }
+
+    &__grid {
+      gap: 60px;
+    }
+
+    &__title {
+      font-size: 60px;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .biography {
+    padding: 80px 0;
+
+    .container {
+      padding: 0 24px;
+    }
+
+    &__grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+
+    &__image {
+      max-width: 100%;
+      height: 450px;
+      justify-self: stretch;
+    }
+
+    &__title {
+      font-size: 52px;
+    }
+
+    &__signature {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .biography {
+    &__title {
+      font-size: 42px;
+    }
+
+    &__image {
+      height: 320px;
+    }
+
+    &__text {
+      font-size: 18px;
+    }
+
+    &__button {
+      width: 100%;
+      min-width: auto;
+    }
+  }
+}
