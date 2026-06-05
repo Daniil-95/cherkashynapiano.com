@@ -12,6 +12,12 @@
         "build/**"
       ]
     },
+    "lint": {
+      "dependsOn": ["^lint"]
+    },
+    "typecheck": {
+      "dependsOn": ["^typecheck"]
+    },
     "start": {
       "cache": false
     }

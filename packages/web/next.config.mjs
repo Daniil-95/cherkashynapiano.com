@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  swcMinify: true,
+
   images: {
     remotePatterns: [
       {
@@ -10,12 +10,8 @@ const nextConfig = {
         port: "1337",
         pathname: "/uploads/**",
       },
-      {
-        protocol: "https",
-        hostname: "**.com",
-      },
     ],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
