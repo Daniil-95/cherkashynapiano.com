@@ -397,6 +397,35 @@ export interface ApiConcertConcert extends Schema.CollectionType {
   };
 }
 
+export interface ApiHeroHero extends Schema.SingleType {
+  collectionName: 'heroes';
+  info: {
+    description: '';
+    displayName: 'Hero';
+    pluralName: 'heroes';
+    singularName: 'hero';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    buttonLink: Attribute.String;
+    buttonText: Attribute.String;
+    createdAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::hero.hero', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    description: Attribute.Text;
+    pianoImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    portraitImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    publishedAt: Attribute.DateTime;
+    subtitle: Attribute.String;
+    title: Attribute.String;
+    updatedAt: Attribute.DateTime;
+    updatedBy: Attribute.Relation<'api::hero.hero', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface PluginContentReleasesRelease extends Schema.CollectionType {
   collectionName: 'strapi_releases';
   info: {
@@ -787,6 +816,7 @@ declare module '@strapi/types' {
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
       'api::concert.concert': ApiConcertConcert;
+      'api::hero.hero': ApiHeroHero;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::upload.file': PluginUploadFile;
