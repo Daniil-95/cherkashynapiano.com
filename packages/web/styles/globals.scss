@@ -2,11 +2,15 @@
 @import "mixins";
 @import "layout";
 
+@import "@fancyapps/ui/dist/fancybox/fancybox.css";
+
 @import "header";
 @import "hero";
 @import "biography";
 @import "repertoire";
 @import "concerts";
+@import "photos";
+@import "videos";
 @import "footer";
 
 html,

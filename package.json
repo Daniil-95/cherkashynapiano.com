@@ -17,11 +17,15 @@
     "format": "prettier . --write"
   },
   "devDependencies": {
-    "turbo": "^2.0.0",
-    "prettier": "^3.6.0"
+    "prettier": "^3.6.0",
+    "turbo": "^2.0.0"
   },
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "@fancyapps/ui": "^6.1.14",
+    "embla-carousel-react": "^8.6.0"
   }
 }

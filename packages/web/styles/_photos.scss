@@ -1,0 +1,109 @@
+.photos-section {
+  padding: $section-padding-desktop 0;
+  background: $background-light;
+}
+
+.photos-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: $spacing-md;
+}
+
+.photos-navigation {
+  display: flex;
+  gap: 12px;
+}
+
+.photos-button {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid $border-gold;
+  border-radius: 50%;
+
+  background: transparent;
+  color: $color-gold;
+
+  cursor: pointer;
+  transition: all $transition-default;
+
+  &:hover {
+    background: $color-gold;
+    color: $color-white;
+  }
+}
+
+.photos-slider {
+  overflow: hidden;
+}
+
+.photos-track {
+  display: flex;
+  gap: $spacing-sm;
+}
+
+.photos-item {
+  flex: 0 0 280px;
+
+  display: block;
+  overflow: hidden;
+
+  text-decoration: none;
+  border-radius: $radius-md;
+}
+
+.photos-image {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+
+  display: block;
+  object-fit: cover;
+
+  transition: transform $transition-slow;
+}
+
+.photos-item:hover .photos-image {
+  transform: scale(1.04);
+}
+
+@include media-breakpoint-down(lg) {
+  .photos-section {
+    padding: $section-padding-tablet 0;
+  }
+
+  .photos-track {
+    gap: 20px;
+  }
+
+  .photos-item {
+    flex: 0 0 240px;
+  }
+}
+
+@include media-breakpoint-down(md) {
+  .photos-section {
+    padding: $section-padding-mobile 0;
+  }
+
+  .photos-header {
+    flex-direction: column;
+    gap: $spacing-sm;
+  }
+
+  .photos-navigation {
+    align-self: flex-end;
+  }
+
+  .photos-track {
+    gap: 16px;
+  }
+
+  .photos-item {
+    flex: 0 0 220px;
+  }
+}
