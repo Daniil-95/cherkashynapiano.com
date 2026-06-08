@@ -37,19 +37,11 @@ export default function Photos() {
           </div>
 
           <div className="photos-navigation">
-            <button
-              className="photos-button photos-prev"
-              aria-label="Previous slide"
-              onClick={scrollPrev}
-            >
+            <button className="photos-button photos-prev" aria-label="Previous slide" onClick={scrollPrev}>
               ←
             </button>
 
-            <button
-              className="photos-button photos-next"
-              aria-label="Next slide"
-              onClick={scrollNext}
-            >
+            <button className="photos-button photos-next" aria-label="Next slide" onClick={scrollNext}>
               →
             </button>
           </div>
@@ -59,18 +51,8 @@ export default function Photos() {
           <div className="photos-slider" ref={emblaRef}>
             <div className="photos-track">
               {photos.map((photo, index) => (
-                <a
-                  key={index}
-                  href={photo}
-                  data-fancybox="gallery"
-                  data-caption="Irina Cherkashyna"
-                  className="photos-item"
-                >
-                  <img
-                    src={photo}
-                    alt={`Irina Cherkashyna ${index + 1}`}
-                    className="photos-image"
-                  />
+                <a key={index} href={photo} data-fancybox="gallery" data-caption="Irina Cherkashyna" className="photos-item">
+                  <img src={photo} alt={`Irina Cherkashyna ${index + 1}`} className="photos-image"/>
                 </a>
               ))}
             </div>

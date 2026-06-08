@@ -7,18 +7,13 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
+    window.scrollTo({top: 0, behavior: "smooth",});
   };
 
   return (
     <footer className="site-footer">
       <div className="container">
-
         <div className="footer-grid">
-
           <div className="footer-brand">
             <h3 className="footer-logo">
               IRINA
@@ -47,7 +42,7 @@ export default function Footer() {
             <h4>Contact</h4>
 
             <a href="mailto:irina@example.com">
-              irina@example.com
+              cherkashynairina@gmail.com
             </a>
 
             <span>
@@ -60,22 +55,12 @@ export default function Footer() {
 
             <div className="footer-social-links">
 
-              <a href="#" aria-label="YouTube">
-                <Image
-                  src="/images/logos/youtube-logo.svg"
-                  alt="YouTube"
-                  width={24}
-                  height={24}
-                />
+              <a href="https://www.youtube.com/@FourhandsPiano" aria-label="YouTube">
+                <Image src="/images/logos/youtube-logo.svg" alt="YouTube" width={24} height={24}/>
               </a>
 
-              <a href="#" aria-label="Instagram">
-                <Image
-                  src="/images/logos/instagram-logo.svg"
-                  alt="Instagram"
-                  width={24}
-                  height={24}
-                />
+              <a href="https://www.instagram.com/cherkashynairina?igsh=MWY3bWNvZWFnYXM4ZA%3D%3D" aria-label="Instagram">
+                <Image src="/images/logos/instagram-logo.svg" alt="Instagram" width={24} height={24}/>
               </a>
 
             </div>
@@ -89,17 +74,10 @@ export default function Footer() {
             © {currentYear} Irina Cherkashyna. All rights reserved.
           </span>
 
-          <button
-            type="button"
-            className="footer-top"
-            onClick={scrollToTop}
-            aria-label="Back to top"
-          >
+          <button type="button" className="footer-top" onClick={scrollToTop} aria-label="Back to top">
             ↑
           </button>
-
         </div>
-
       </div>
     </footer>
   );

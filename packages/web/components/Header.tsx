@@ -6,7 +6,6 @@ import Image from "next/image";
 export default function Header() {
   return (
     <header className="site-header">
-
       <div className="header-logo">
         <Link href="/">
           <span className="header-logo-main">
@@ -30,25 +29,14 @@ export default function Header() {
       </nav>
 
       <div className="header-social">
-        <a href="#" aria-label="YouTube">
-          <Image
-            src="/images/logos/youtube-logo.svg"
-            alt="YouTube"
-            width={24}
-            height={24}
-          />
+        <a href="https://www.youtube.com/@FourhandsPiano" aria-label="YouTube">
+          <Image src="/images/logos/youtube-logo.svg" alt="YouTube" width={24} height={24}/>
         </a>
 
-        <a href="#" aria-label="Instagram">
-          <Image
-            src="/images/logos/instagram-logo.svg"
-            alt="Instagram"
-            width={24}
-            height={24}
-          />
+        <a href="https://www.instagram.com/cherkashynairina?igsh=MWY3bWNvZWFnYXM4ZA%3D%3D" aria-label="Instagram">
+          <Image src="/images/logos/instagram-logo.svg" alt="Instagram" width={24} height={24}/>
         </a>
       </div>
-
     </header>
   );
 }

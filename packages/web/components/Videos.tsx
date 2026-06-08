@@ -54,19 +54,11 @@ export default function Videos() {
           </div>
 
           <div className="videos-navigation">
-            <button
-              className="videos-button videos-prev"
-              aria-label="Previous video"
-              onClick={scrollPrev}
-            >
+            <button className="videos-button videos-prev" aria-label="Previous video" onClick={scrollPrev}>
               ←
             </button>
 
-            <button
-              className="videos-button videos-next"
-              aria-label="Next video"
-              onClick={scrollNext}
-            >
+            <button className="videos-button videos-next" aria-label="Next video" onClick={scrollNext}>
               →
             </button>
           </div>
@@ -75,18 +67,9 @@ export default function Videos() {
         <div className="videos-slider" ref={emblaRef}>
           <div className="videos-track">
             {videos.map((video) => (
-              <a
-                key={video.id}
-                href={`https://www.youtube.com/watch?v=${video.id}`}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="video-card"
-              >
+              <a key={video.id} href={`https://www.youtube.com/watch?v=${video.id}`} target="_blank" rel="noopener noreferrer" className="video-card">
                 <div className="video-thumbnail">
-                  <img
-                    src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                    alt={video.title}
-                  />
+                  <img src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`} alt={video.title} />
 
                   <div className="video-play">
                     ▶

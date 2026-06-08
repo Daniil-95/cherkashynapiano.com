@@ -46,10 +46,7 @@ export default function Repertoire() {
           </div>
         </div>
 
-        <Link
-          href="/repertoire"
-          className="repertoire-button"
-        >
+        <Link href="/repertoire" className="repertoire-button">
           View full repertoire
           <span>→</span>
         </Link>
