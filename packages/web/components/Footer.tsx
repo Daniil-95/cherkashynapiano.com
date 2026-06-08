@@ -41,7 +41,7 @@ export default function Footer() {
           <div className="footer-contact">
             <h4>Contact</h4>
 
-            <a href="mailto:irina@example.com">
+            <a href="mailto:cherkashynairina@gmail.com">
               cherkashynairina@gmail.com
             </a>
 
@@ -62,14 +62,11 @@ export default function Footer() {
               <a href="https://www.instagram.com/cherkashynairina?igsh=MWY3bWNvZWFnYXM4ZA%3D%3D" aria-label="Instagram">
                 <Image src="/images/logos/instagram-logo.svg" alt="Instagram" width={24} height={24}/>
               </a>
-
             </div>
           </div>
-
         </div>
 
         <div className="footer-bottom">
-
           <span>
             © {currentYear} Irina Cherkashyna. All rights reserved.
           </span>
