@@ -1,0 +1,146 @@
+.concerts-section {
+    background: $color-light-alt;
+    height: 100%;
+}
+
+.concerts-content {
+  padding: 56px 64px;
+}
+
+.concerts-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.concerts-section .section-label {
+  margin-bottom: 12px;
+}
+
+.concerts-section .section-title {
+  margin-bottom: 18px;
+}
+
+.concerts-section .section-divider {
+  width: 48px;
+  height: 2px;
+  background: $color-gold;
+}
+
+.concerts-all-link {
+  position: relative;
+  margin-top: 22px;
+  color: $text-body;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1;
+}
+
+.concerts-all-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 100%;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.45);
+  transition: $transition-default;
+}
+
+.concerts-all-link:hover::after {
+  background: $color-gold;
+}
+
+.concerts-list {
+  border-top: 1px solid rgba(0, 0, 0, .08);
+}
+
+.concert-item {
+  display: grid;
+  grid-template-columns: 110px 1fr 80px 40px;
+  align-items: center;
+  min-height: 96px;
+  border-bottom: 1px solid rgba(0, 0, 0, .12);
+  transition: $transition-default;
+}
+
+.concert-item:hover {
+  padding-left: 10px;
+}
+
+.concert-date {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.concert-day {
+  font-family: $font-heading;
+  font-size: 3rem;
+  line-height: 1;
+}
+
+.concert-month {
+  display: flex;
+  flex-direction: column;
+  font-size: 12px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.concert-info {
+  padding-left: 24px;
+  border-left: 1px solid rgba(0, 0, 0, .15);
+}
+
+.concert-info h3 {
+  margin: 0 0 6px;
+  font-family: $font-heading;
+  font-size: 1.75rem;
+  font-weight: 400;
+}
+
+.concert-info p {
+  margin: 0;
+  color: rgba(0, 0, 0, .65);
+  font-size: 15px;
+}
+
+.concert-time {
+  text-align: right;
+  font-size: 15px;
+}
+
+.concert-arrow {
+  text-align: center;
+  font-size: 1.5rem;
+  color: $color-gold;
+  margin-left: 10px;
+}
+
+@include media-breakpoint-down(lg) {
+  .concerts-content {
+    padding: 40px 32px;
+  }
+
+  .concert-item {
+    grid-template-columns: 1fr;
+    gap: 16px;
+
+    padding: 24px 0;
+  }
+
+  .concert-info {
+    padding-left: 0;
+    border-left: 0;
+  }
+
+  .concert-time,
+  .concert-arrow {
+    text-align: left;
+  }
+}

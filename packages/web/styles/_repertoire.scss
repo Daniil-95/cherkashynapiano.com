@@ -1,0 +1,70 @@
+.repertoire-section {
+  background: $background-dark;
+  color: $text-light;
+  height: 100%;
+}
+
+.repertoire-content {
+  padding: 56px 72px;
+}
+
+.repertoire-section .section-label {
+  margin-bottom: 12px;
+}
+
+.repertoire-section .section-title {
+  color: $text-light;
+  margin-bottom: 18px;
+}
+
+.repertoire-section .section-divider {
+  width: 48px;
+  height: 2px;
+  background: $color-gold;
+  margin-bottom: 24px;
+}
+
+.repertoire-list {
+  border-top: 1px solid rgba(255,255,255,.12);
+}
+
+.repertoire-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 54px;
+  border-bottom: 1px solid rgba(255,255,255,.12);
+  font-family: $font-heading;
+  font-size: 1.25rem;
+  transition: .3s ease;
+  cursor: pointer;
+}
+
+.repertoire-item:hover {
+  color: $color-gold;
+}
+
+.repertoire-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 36px;
+  padding: 16px 32px;
+  border: 1px solid $color-gold;
+  color: $text-light;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  transition: .3s ease;
+}
+
+.repertoire-button:hover {
+  background: $color-gold;
+  color: #080808;
+}
+
+@include media-breakpoint-down(lg) {
+  .repertoire-content {
+    padding: 40px 32px;
+  }
+}
