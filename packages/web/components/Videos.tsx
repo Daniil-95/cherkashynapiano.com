@@ -50,7 +50,7 @@ export default function Videos() {
         <div className="videos-header">
           <div className="videos-heading">
             <div className="section-label">Media</div>
-            <h2 className="section-title">Videos</h2>
+            <h2 className="section-title-white">Videos</h2>
           </div>
 
           <div className="videos-navigation">
