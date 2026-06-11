@@ -11,7 +11,7 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/plugin-users-permissions": "^4.24.0",
+    "@strapi/plugin-users-permissions": "^5.48.0",
     "pg": "^8.21.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
