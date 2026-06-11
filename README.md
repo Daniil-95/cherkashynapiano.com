@@ -73,7 +73,7 @@ npm run start
 
 ## Live Demo
 
-https://cherkashynapiano.com
+https://cherkashynapiano-com-web.vercel.app/
 
 ## Autor
 
