@@ -1,0 +1,44 @@
+$color-primary: #111827;
+$color-white: #ffffff;
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: translateY(-1px);
+    filter: brightness(1.08);
+  }
+  50% {
+    transform: translateY(-1px);
+    filter: brightness(1);
+  }
+}
+
+.button {
+  background: $color-primary;
+  color: $color-white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover:not(:disabled) {
+    background: darken($color-primary, 5%);
+    transform: translateY(-1px);
+  }
+
+  &:active:not(:disabled) {
+    transform: translateY(0);
+  }
+
+  &:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+  }
+
+  &[data-pending="true"] {
+    animation: pulse 0.6s infinite;
+  }
+}

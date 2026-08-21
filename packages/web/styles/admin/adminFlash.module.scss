@@ -1,0 +1,52 @@
+$color-success: #047857;
+$color-white: #ffffff;
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutUp {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.flash {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: $color-success;
+  color: $color-white;
+  padding: 16px 24px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideInDown 0.16s ease-out forwards;
+  z-index: 1000;
+
+  p {
+    margin: 0;
+    color: inherit;
+  }
+
+  @media (max-width: 768px) {
+    top: 76px;
+    left: 16px;
+    right: 16px;
+    transform: none;
+  }
+}

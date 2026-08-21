@@ -1,0 +1,256 @@
+$color-text: #111827;
+$color-bg: #f3f4f6;
+$color-white: #ffffff;
+$color-border: #d1d5db;
+$color-primary: #111827;
+
+.shell {
+  display: grid;
+  grid-template-columns: 272px 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100vh;
+  background: $color-bg;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Desktop Sidebar */
+.sidebar {
+  grid-column: 1;
+  background: $color-white;
+  border-right: 1px solid $color-border;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+.sidebarContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 24px 16px;
+}
+
+.logo {
+  font-size: 18px;
+  font-weight: 700;
+  color: $color-text;
+  margin-bottom: 24px;
+  white-space: nowrap;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: $color-text;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      background: rgba($color-primary, 0.08);
+    }
+
+    &.active {
+      background: rgba($color-primary, 0.12);
+      color: $color-primary;
+      font-weight: 600;
+    }
+  }
+}
+
+.icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.footer {
+  padding: 16px;
+  border-top: 1px solid $color-border;
+}
+
+.logoutButton {
+  width: 100%;
+  padding: 10px 16px;
+  background: $color-primary;
+  color: $color-white;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+
+  &:hover {
+    background: darken($color-primary, 5%);
+  }
+}
+
+/* Mobile Header */
+.mobileHeader {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 56px;
+    background: $color-white;
+    border-bottom: 1px solid $color-border;
+    z-index: 100;
+  }
+}
+
+.mobileHeaderContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0 16px;
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: $color-text;
+  padding: 0;
+  line-height: 1;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+/* Mobile Drawer */
+.mobileBackdrop {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: block;
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+  }
+}
+
+.mobileDrawer {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 56px;
+    right: 0;
+    bottom: 0;
+    width: 82vw;
+    max-width: 280px;
+    background: $color-white;
+    z-index: 101;
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    border-left: 1px solid $color-border;
+
+    &.mobileDrawerOpen {
+      transform: translateX(0);
+    }
+  }
+}
+
+.mobileMenu {
+  list-style: none;
+  padding: 16px 0;
+  margin: 0;
+  flex: 1;
+  overflow-y: auto;
+
+  li {
+    margin: 0;
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 16px;
+    color: $color-text;
+    text-decoration: none;
+    border-radius: 0;
+    transition: background 0.2s;
+    font-size: 14px;
+    font-weight: 500;
+
+    &:hover {
+      background: rgba($color-primary, 0.08);
+    }
+
+    &.active {
+      background: rgba($color-primary, 0.12);
+      color: $color-primary;
+      font-weight: 600;
+      border-left: 3px solid $color-primary;
+      padding-left: 13px;
+    }
+  }
+}
+
+.mobileLogout {
+  padding: 16px;
+  border-top: 1px solid $color-border;
+
+  .logoutButton {
+    width: 100%;
+  }
+}
+
+/* Main Content */
+.main {
+  grid-column: 2;
+  background: $color-bg;
+  overflow-y: auto;
+  padding: 24px;
+
+  @media (max-width: 768px) {
+    grid-column: 1;
+    margin-top: 56px;
+    padding: 16px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 12px;
+  }
+}

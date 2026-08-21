@@ -1,0 +1,175 @@
+$color-text: #111827;
+$color-bg: #f3f4f6;
+$color-white: #ffffff;
+$color-border: #d1d5db;
+$color-primary: #111827;
+$color-danger: #b91c1c;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    color: $color-text;
+  }
+}
+
+.listSection {
+  h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: $color-text;
+  }
+}
+
+.empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #9ca3af;
+  font-size: 14px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: 24px;
+  transition: box-shadow 0.2s;
+
+  &:hover {
+    box-shadow: 0 4px 12px rgba(17, 24, 39, 0.08);
+  }
+
+  @media (max-width: 768px) {
+    padding: 16px;
+  }
+}
+
+.itemContent {
+  margin-bottom: 16px;
+
+  h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: $color-text;
+  }
+
+  p {
+    font-size: 13px;
+    color: #6b7280;
+    margin-bottom: 4px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.category,
+.composer,
+.venue,
+.email,
+.time,
+.meta {
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 4px !important;
+}
+
+.description {
+  margin-top: 12px !important;
+  line-height: 1.6;
+  color: $color-text;
+}
+
+.thumbnail {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  border-radius: 6px;
+  margin-bottom: 12px;
+  background: $color-bg;
+}
+
+.videoPreview {
+  margin-bottom: 12px;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.itemHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  h3 {
+    margin: 0;
+  }
+}
+
+.date {
+  font-size: 12px;
+  color: #9ca3af;
+  white-space: nowrap;
+
+  @media (max-width: 480px) {
+    white-space: normal;
+  }
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+
+  form {
+    display: contents;
+  }
+
+  button {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    flex: 1;
+    min-width: 100px;
+
+    @media (max-width: 480px) {
+      flex: 1 0 calc(50% - 6px);
+    }
+
+    &:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+  }
+}
+
+.deleteButton {
+  background: $color-white;
+  color: $color-danger;
+  border: 1px solid $color-danger;
+
+  &:hover:not(:disabled) {
+    background: rgba($color-danger, 0.05);
+    border-color: darken($color-danger, 10%);
+  }
+}

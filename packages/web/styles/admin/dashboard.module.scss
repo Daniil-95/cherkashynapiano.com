@@ -1,0 +1,62 @@
+$color-text: #111827;
+$color-white: #ffffff;
+$color-border: #d1d5db;
+$color-primary: #111827;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 32px;
+    color: $color-text;
+  }
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+}
+
+.statCard {
+  background: $color-white;
+  border: 1px solid $color-border;
+  border-radius: 8px;
+  padding: 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.2s;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $color-primary;
+    box-shadow: 0 4px 12px rgba(17, 24, 39, 0.08);
+    transform: translateY(-2px);
+  }
+
+  .label {
+    font-size: 14px;
+    color: #6b7280;
+    margin-bottom: 12px;
+    font-weight: 500;
+  }
+
+  .count {
+    font-size: 32px;
+    font-weight: 700;
+    color: $color-text;
+    margin: 0;
+  }
+}

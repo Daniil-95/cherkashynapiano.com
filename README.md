@@ -25,6 +25,28 @@ Projekt slouží jako profesionální webová prezentace obsahující biografii,
 - Videogalerie
 - Kontaktní formulář
 - SEO optimalizace
+- **Nová: Integrovaná Admin Panel** - Správa obsahu přímo z Next.js
+
+## Admin Panel
+
+Projekt nyní zahrnuje integrovanou administrativní panel pro správu obsahu bez nutnosti používat Strapi.
+
+Для настройки админ-панели смотрите [ADMIN_SETUP.md](packages/web/ADMIN_SETUP.md) (на русском языке).
+
+**Доступ:** `http://localhost:3000/admin`
+**Логин:** Используйте учетные данные администратора, созданные во время установки
+
+### Функции админ-панели
+
+- 📊 Дашборд со статистикой
+- 📝 Управление биографией
+- 🎵 Управление репертуаром (произведения)
+- 🎤 Управление концертами
+- 📸 Управление фотогалереей
+- 🎬 Управление видео
+- 💬 Просмотр сообщений контактной формы
+- 🔒 Безопасная аутентификация с JWT токенами
+- 📱 Полная поддержка мобильных устройств
 
 ## Struktura projektu
 
